@@ -5,7 +5,7 @@ final class Enemy: SKSpriteNode {
 
     var patrolMinX: CGFloat = 0
     var patrolMaxX: CGFloat = 0
-    var speed: CGFloat      = 80
+    var moveSpeed: CGFloat  = 80
     var moveRight           = false
 
     private var frameTime: Double = 0
@@ -24,7 +24,7 @@ final class Enemy: SKSpriteNode {
         e.zPosition = 9
         e.patrolMinX = patrolLeft
         e.patrolMaxX = patrolRight
-        e.speed = speed
+        e.moveSpeed = speed
         e.moveRight = Bool.random()
 
         let body = SKPhysicsBody(rectangleOf: CGSize(width: 20, height: 26))
@@ -47,11 +47,11 @@ final class Enemy: SKSpriteNode {
 
         // Patrol back and forth
         if moveRight {
-            pb.velocity.dx = speed
+            pb.velocity.dx = moveSpeed
             xScale = 1
             if position.x >= patrolMaxX { moveRight = false }
         } else {
-            pb.velocity.dx = -speed
+            pb.velocity.dx = -moveSpeed
             xScale = -1
             if position.x <= patrolMinX { moveRight = true }
         }
