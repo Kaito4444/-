@@ -1,0 +1,255 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB01 /* AppDelegate.swift in Sources */        = {isa = PBXBuildFile; fileRef = AF01; };
+		AB02 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF02; };
+		AB03 /* Constants.swift in Sources */          = {isa = PBXBuildFile; fileRef = AF03; };
+		AB04 /* TextureFactory.swift in Sources */     = {isa = PBXBuildFile; fileRef = AF04; };
+		AB05 /* TitleScene.swift in Sources */         = {isa = PBXBuildFile; fileRef = AF05; };
+		AB06 /* GameScene.swift in Sources */          = {isa = PBXBuildFile; fileRef = AF06; };
+		AB07 /* Player.swift in Sources */             = {isa = PBXBuildFile; fileRef = AF07; };
+		AB08 /* Enemy.swift in Sources */              = {isa = PBXBuildFile; fileRef = AF08; };
+		AB09 /* BlockNode.swift in Sources */          = {isa = PBXBuildFile; fileRef = AF09; };
+		AB10 /* StageBuilder.swift in Sources */       = {isa = PBXBuildFile; fileRef = AF10; };
+		AB11 /* HUDNode.swift in Sources */            = {isa = PBXBuildFile; fileRef = AF11; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF01 /* AppDelegate.swift */        = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift;        sourceTree = "<group>"; };
+		AF02 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AF03 /* Constants.swift */          = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift;          sourceTree = "<group>"; };
+		AF04 /* TextureFactory.swift */     = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureFactory.swift;     sourceTree = "<group>"; };
+		AF05 /* TitleScene.swift */         = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScene.swift;         sourceTree = "<group>"; };
+		AF06 /* GameScene.swift */          = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift;          sourceTree = "<group>"; };
+		AF07 /* Player.swift */             = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift;             sourceTree = "<group>"; };
+		AF08 /* Enemy.swift */              = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift;              sourceTree = "<group>"; };
+		AF09 /* BlockNode.swift */          = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift;          sourceTree = "<group>"; };
+		AF10 /* StageBuilder.swift */       = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageBuilder.swift;       sourceTree = "<group>"; };
+		AF11 /* HUDNode.swift */            = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDNode.swift;            sourceTree = "<group>"; };
+		AF12 /* Info.plist */               = {isa = PBXFileReference; lastKnownFileType = text.plist.xml;   path = Info.plist;               sourceTree = "<group>"; };
+		PROD /* AbyssRun.app */             = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbyssRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		PH_FW = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		GRP_ROOT = {
+			isa = PBXGroup;
+			children = (GRP_SRC, GRP_PROD);
+			sourceTree = "<group>";
+		};
+		GRP_PROD = {
+			isa = PBXGroup;
+			children = (PROD);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		GRP_SRC = {
+			isa = PBXGroup;
+			children = (
+				AF01, AF02, AF03, AF04,
+				AF05, AF06, AF07, AF08,
+				AF09, AF10, AF11, AF12,
+			);
+			path = AbyssRun;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		TGT = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFG_LIST_TGT;
+			buildPhases = (PH_SRC, PH_FW, PH_RES);
+			buildRules = ();
+			dependencies = ();
+			name = AbyssRun;
+			productName = AbyssRun;
+			productReference = PROD;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PROJ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = { TGT = { CreatedOnToolsVersion = 15.0; }; };
+			};
+			buildConfigurationList = CFG_LIST_PROJ;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = GRP_ROOT;
+			productRefGroup = GRP_PROD;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (TGT);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		PH_RES = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		PH_SRC = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB01, AB02, AB03, AB04,
+				AB05, AB06, AB07, AB08,
+				AB09, AB10, AB11,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CFG_DBG_PROJ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1", "$(inherited)");
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFG_REL_PROJ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFG_DBG_TGT = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AbyssRun/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AbyssRun;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CFG_REL_TGT = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AbyssRun/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AbyssRun;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFG_LIST_PROJ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (CFG_DBG_PROJ, CFG_REL_PROJ);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFG_LIST_TGT = {
+			isa = XCConfigurationList;
+			buildConfigurations = (CFG_DBG_TGT, CFG_REL_TGT);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PROJ;
+}
