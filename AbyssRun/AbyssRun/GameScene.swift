@@ -162,8 +162,11 @@ final class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         hud.update(timeLeft: timeLeft, deaths: deathCount)
 
-        // Player input
-        player.isOnGround = contactGround > 0 || contactMovePlat > 0
+        // isOnGround は didBegin/didEnd で直接 player へセット済み。
+        // カウンターが0になったときだけ false に戻す（速度ベース上書きは Player 側で行う）
+        if contactGround == 0 && contactMovePlat == 0 {
+            player.isOnGround = false
+        }
         player.applyInput(left: hud.holdLeft, right: hud.holdRight,
                           jumpBtn: hud.holdJump, dt: dt)
         player.applyPlatformRide()
@@ -309,27 +312,42 @@ final class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     // MARK: - Physics Contacts
+
+    // SpriteKit の contactNormal は「bodyB → bodyA 方向」。
+    // bodyA/bodyB の順番は保証されないので、player がどちら側かを確認して
+    // 「プレイヤーから見た上向き成分」を正しく算出する。
+    private func upwardComponent(_ contact: SKPhysicsContact,
+                                 playerCategory: UInt32 = PC.player) -> CGFloat {
+        let aIsPlayer = contact.bodyA.categoryBitMask == playerCategory
+        // aIsPlayer のとき: normal は B(地面)→A(プレイヤー) = 上向き → dy > 0
+        // !aIsPlayer のとき: normal は B(プレイヤー)→A(地面) = 下向き → 符号を反転
+        return aIsPlayer ? contact.contactNormal.dy : -contact.contactNormal.dy
+    }
+
     func didBegin(_ contact: SKPhysicsContact) {
         let a = contact.bodyA; let b = contact.bodyB
         let combo = a.categoryBitMask | b.categoryBitMask
 
         // Player on solid ground
         if combo == (PC.player | PC.solid) {
-            let normal = contact.contactNormal
-            if normal.dy > 0.4 { contactGround += 1 }
-
+            let upDY = upwardComponent(contact)
+            if upDY > 0.3 {
+                contactGround += 1
+                player.isOnGround = true   // 直接セット (バッファジャンプに即反映)
+            }
             // Crumble detection
             let otherNode = (a.categoryBitMask == PC.player) ? b.node : a.node
-            if let block = otherNode as? BlockNode, block.blockType == .crumble, normal.dy > 0.4 {
+            if let block = otherNode as? BlockNode, block.blockType == .crumble, upDY > 0.3 {
                 crumbleContacts.insert(ObjectIdentifier(block))
             }
         }
 
-        // Player on moving platform
+        // Player on moving / vanishing platform
         if combo == (PC.player | PC.movPlat) {
-            let normal = contact.contactNormal
-            if normal.dy > 0.4 {
+            let upDY = upwardComponent(contact)
+            if upDY > 0.3 {
                 contactMovePlat += 1
+                player.isOnGround = true
                 let platNode = (a.categoryBitMask == PC.movPlat) ? a.node : b.node
                 if let blockNode = platNode as? BlockNode,
                    (blockNode.blockType == .movingH || blockNode.blockType == .movingV) {
@@ -374,21 +392,27 @@ final class GameScene: SKScene, SKPhysicsContactDelegate {
         let combo = a.categoryBitMask | b.categoryBitMask
 
         if combo == (PC.player | PC.solid) {
-            let normal = contact.contactNormal
-            if normal.dy > 0.4 {
+            let upDY = upwardComponent(contact)
+            if upDY > 0.3 {
                 contactGround = max(0, contactGround - 1)
                 let otherNode = (a.categoryBitMask == PC.player) ? b.node : a.node
                 if let block = otherNode as? BlockNode, block.blockType == .crumble {
                     crumbleContacts.remove(ObjectIdentifier(block))
                 }
+                if contactGround == 0 && contactMovePlat == 0 {
+                    player.isOnGround = false
+                }
             }
         }
 
         if combo == (PC.player | PC.movPlat) {
-            let normal = contact.contactNormal
-            if normal.dy > 0.4 {
+            let upDY = upwardComponent(contact)
+            if upDY > 0.3 {
                 contactMovePlat = max(0, contactMovePlat - 1)
-                if contactMovePlat == 0 { player.stopRiding() }
+                if contactMovePlat == 0 {
+                    player.stopRiding()
+                    if contactGround == 0 { player.isOnGround = false }
+                }
             }
         }
     }

@@ -3,22 +3,33 @@ import SpriteKit
 // MARK: - Player Node
 final class Player: SKSpriteNode {
 
-    // Physics state
+    // Ground state (set by GameScene contact callbacks)
     var isOnGround   = false
-    var jumpHeld: Double = 0      // seconds holding jump this press
-    var prevJumpBtn  = false      // edge-detect jump
+    var wasOnGround  = false   // previous frame, for coyote time
+
+    // Jump feel
+    var jumpHeld: Double     = 0
+    var jumpBuffer: Double   = 0   // 入力バッファ: 空中でボタンを押しても着地後に発動
+    var coyoteTime: Double   = 0   // コヨーテタイム: 崖から落ちた直後も数フレームジャンプ可
+
+    var prevJumpBtn  = false
     var facingRight  = true
 
     // Platform riding
     var ridingPlatform: SKNode? = nil
-    var platformPrevX:  CGFloat = 0
-    var platformPrevY:  CGFloat = 0
+    var platformPrevX: CGFloat  = 0
+    var platformPrevY: CGFloat  = 0
 
     // Animation
     private var runFrameTime: Double = 0
     private var runFrame = 0
     private let runFrames = [Tex.playerIdle, Tex.playerRun]
 
+    // Tuning constants
+    private let kJumpBufferWindow: Double = 0.14  // 押してから何秒以内に着地したら飛べるか
+    private let kCoyoteWindow:     Double = 0.10  // 崖から落ちて何秒以内にジャンプできるか
+
+    // MARK: - Factory
     static func spawn(at pos: CGPoint) -> Player {
         let p = Player(texture: Tex.playerIdle,
                        color: .clear,
@@ -27,58 +38,70 @@ final class Player: SKSpriteNode {
         p.name = "player"
         p.zPosition = 10
 
-        // Slightly narrower hitbox for fairness
         let body = SKPhysicsBody(rectangleOf: CGSize(width: 18, height: 32))
         body.mass = 1.0
         body.allowsRotation = false
         body.categoryBitMask    = PC.player
         body.contactTestBitMask = PC.solid | PC.movPlat | PC.enemy | PC.hazard | PC.goal
         body.collisionBitMask   = PC.solid | PC.movPlat
-        body.linearDamping  = 0.5   // slight drag (gives inertia feel)
+        body.linearDamping  = 0.5
         body.restitution    = 0
         body.friction       = 0.4
         p.physicsBody = body
         return p
     }
 
-    // MARK: - Input drive (called from GameScene.update)
+    // MARK: - Input (called every frame from GameScene.update)
     func applyInput(left: Bool, right: Bool, jumpBtn: Bool, dt: Double) {
         guard let pb = physicsBody else { return }
 
-        // Horizontal
+        // ── 横移動 ──
         var targetVX: CGFloat = 0
         if left  { targetVX = -kWalkSpeed; facingRight = false }
         if right { targetVX =  kWalkSpeed; facingRight = true  }
-
-        // Blend toward target (gives inertia: ~0.12s to full speed)
         let blend: CGFloat = isOnGround ? 0.22 : 0.12
         pb.velocity.dx += (targetVX - pb.velocity.dx) * blend
-
-        // Flip sprite
         xScale = facingRight ? 1 : -1
 
-        // --- Jump ---
-        let jumpDown = jumpBtn && !prevJumpBtn  // rising edge
-        prevJumpBtn = jumpBtn
+        // ── 速度ベースの地面チェック (上昇中は強制的に空中扱い) ──
+        if pb.velocity.dy > 2.0 { isOnGround = false }
 
-        if jumpDown && isOnGround {
+        // ── コヨーテタイム: 前フレームは地面、今フレームは空中 → カウント開始 ──
+        if wasOnGround && !isOnGround { coyoteTime = kCoyoteWindow }
+        wasOnGround = isOnGround
+        coyoteTime  = max(0, coyoteTime - dt)
+
+        // ── ジャンプ入力バッファ: 押した瞬間を記憶 ──
+        let justPressed = jumpBtn && !prevJumpBtn
+        prevJumpBtn = jumpBtn
+        if justPressed { jumpBuffer = kJumpBufferWindow }
+        jumpBuffer = max(0, jumpBuffer - dt)
+
+        // ── ジャンプ発動条件: バッファあり かつ (地面 or コヨーテ) ──
+        let canJump = isOnGround || coyoteTime > 0
+
+        if jumpBuffer > 0 && canJump {
             pb.velocity.dy = kJumpVel
-            isOnGround = false
-            jumpHeld = dt
+            isOnGround  = false
+            jumpHeld    = dt
+            jumpBuffer  = 0
+            coyoteTime  = 0
+
         } else if jumpBtn && jumpHeld > 0 && jumpHeld < kMaxJumpHold {
-            // Variable height: extra force while held
+            // 長押しで追加揚力
             pb.applyForce(CGVector(dx: 0, dy: kJumpExtra * pb.mass))
             jumpHeld += dt
+
         } else if !jumpBtn {
             jumpHeld = 0
         } else {
             jumpHeld += dt
         }
 
-        // Cap fall speed
+        // 最大落下速度
         if pb.velocity.dy < kMaxFall { pb.velocity.dy = kMaxFall }
 
-        // --- Animation ---
+        // ── アニメーション ──
         if isOnGround && (left || right) {
             runFrameTime += dt
             if runFrameTime > 0.12 {
@@ -92,7 +115,7 @@ final class Player: SKSpriteNode {
         }
     }
 
-    // MARK: - Platform riding correction
+    // MARK: - Moving platform sync
     func applyPlatformRide() {
         guard let plat = ridingPlatform else { return }
         let dx = plat.position.x - platformPrevX
@@ -109,7 +132,5 @@ final class Player: SKSpriteNode {
         platformPrevY  = plat.position.y
     }
 
-    func stopRiding() {
-        ridingPlatform = nil
-    }
+    func stopRiding() { ridingPlatform = nil }
 }
