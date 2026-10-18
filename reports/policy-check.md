@@ -32,3 +32,10 @@
 - アップロード時はAI開示を必ず正直に入力する(Suno全生成なら「音声の全部」に該当すると思われるが、選択肢の正確な文言は未確認)。
 - 週1〜2曲までの厳選、重複・極端に短い曲を避ける、メタデータを盛らない。
 - 人間タスク: アップロード前にDistroKid公式ヘルプとSuno規約を人が最終確認(tasks/human-todo.md 参照)。
+
+## 追記 2026-10-19 (新規分のみ。WebFetchは引き続き不可、すべて二次情報・未確認)
+- DistroKid: 10月時点の新たな方針変更の報道は検索で見つからず(未確認)。AI開示は新規アップロードのみ対象で遡及適用なし、自己申告制(検出ツールに依存しない)との要約あり。 https://www.musicinafrica.net/fr/node/391306
+- 受理条件の要約: 権利を保有していれば受理、なりすまし・侵害・大量生成スパムは禁止(第三者ブログ要約、DistroKid公式文言は未確認)。 https://www.soundverse.ai/blog/article/does-distrokid-allow-ai-generated-music-1155
+- 重要・要確認 Suno規約: 2026-09-03発効の規約で、商用利用は「有料プラン加入中にダウンロードした曲」に限られ、月間ダウンロード上限(Pro 20曲/Premier 60曲)があるとの記述。無料プラン生成曲は商用不可(権利はSuno側)、有料化後の遡及も不可で再生成が必要との記述。出典は二次情報であり、Suno公式は未確認。 https://aiagent-navi.com/?p=22067 , https://dynamoi.com/ja/learn/ai-music-distribution/how-to-distribute-suno-music
+  - 運用上の示唆: Suno生成は有料プラン加入中に行いダウンロードする。月間上限を踏まえ、下書き生成のダウンロードを絞る。アップロード前に人がSuno公式規約を確認すること。
+- 注意喚起(ベンダー記事、未検証): 「配信前に音声を加工すべき」とする業者ガイドがあるが、検出回避目的の加工は規約違反リスクがあるため推奨しない。 https://undetectr.com/blog/suno-to-spotify
