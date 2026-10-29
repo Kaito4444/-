@@ -39,3 +39,11 @@
 - 重要・要確認 Suno規約: 2026-09-03発効の規約で、商用利用は「有料プラン加入中にダウンロードした曲」に限られ、月間ダウンロード上限(Pro 20曲/Premier 60曲)があるとの記述。無料プラン生成曲は商用不可(権利はSuno側)、有料化後の遡及も不可で再生成が必要との記述。出典は二次情報であり、Suno公式は未確認。 https://aiagent-navi.com/?p=22067 , https://dynamoi.com/ja/learn/ai-music-distribution/how-to-distribute-suno-music
   - 運用上の示唆: Suno生成は有料プラン加入中に行いダウンロードする。月間上限を踏まえ、下書き生成のダウンロードを絞る。アップロード前に人がSuno公式規約を確認すること。
 - 注意喚起(ベンダー記事、未検証): 「配信前に音声を加工すべき」とする業者ガイドがあるが、検出回避目的の加工は規約違反リスクがあるため推奨しない。 https://undetectr.com/blog/suno-to-spotify
+
+## 追記 2026-10-30 (新規分のみ。WebFetchは musicbusinessworldwide.com で名前解決エラー。すべてWebSearch要約に基づく二次情報、公式本文は未確認)
+- Spotify(2026-10-20発表): 今年「AIスロップ/スパム」とみなした5,000万曲超を推薦から除外(カタログ削除とは別。別途、重大/反復違反で7,500万曲超を削除との説明)。判定は単一シグナルでなく、エンゲージメント、アップロードパターン、メタデータ、第三者AI検出の組み合わせ。AI生成の可能性が高い曲は年間1,000再生のしきい値を下回る確率が10倍(会社申告)。AI生成とされるアーティストIDは既定で推薦から除外・ラベル付けされているとの報道。AI Credits(2026年4月開始)は1日数万件提出。5,000万曲のうちAI生成の数は不明。 https://thenextweb.com/news/spotify-50-million-ai-slop-tracks-recommendations , https://au.variety.com/2026/music/news/spotify-removes-50-million-ai-slop-tracks-recommendations-41607/ , https://www.1news.co.nz/2026/10/21/spotify-removes-more-than-50-million-ai-slop-tracks/
+  - 運用上の示唆: AI開示(DistroKidのAIクレジット)を正直に入力し、大量・類似曲・メタデータ盛りを避ける。推薦除外の対象にならない運用(厳選リリース)が重要。
+- DistroKid/UMG訴訟(新規・重要): 2026-09-15、UMGがDistroKidを米デラウェア連邦地裁に提訴。UMG録音物を模倣した1,000作品の著作権侵害等を主張。訴状は「明示的に開示されたAI音楽の配信自体が対象ではない」と記載との報道。DistroKidは争う姿勢で、請求を受けたトラックを削除したと確認、アーティストへ事前警告がなかったとの苦情あり。 https://www.digitalmusicnews.com/2026/09/15/universal-music-distrokid-lawsuit/ , https://www.musicbusinessworldwide.com/universal-music-group-sues-distrokid/ , https://www.musicbusinessworldwide.com/distrokid-confirms-it-has-removed-tracks-in-response-to-umg-claims/
+  - 運用上の示唆: 既存曲に似た楽曲は削除・アカウント影響のリスク。実在曲・アーティストの模倣禁止(CLAUDE.md)を厳守。アップロード前の類似チェックを人が実施。
+- DistroKid: 10月の公式なAI方針変更は検索で見つからず(未確認)。「遡及適用・再スキャン」とする業者記事(undetectr)があるが、他に裏付けなく未確認。 https://undetectr.com/blog/distrokid-ai-policy-2026
+- Suno: 2026-08-10発表・09-03施行の上限(無料は通算7回、Pro月20、Premier月60)を複数報道で再確認。既存ライブラリにも適用との報道あり、未使用分の繰り越しなしとの記述あり。10月の追加変更は見つからず。Suno公式は未確認。 https://www.musicbusinessworldwide.com/suno-limits-pro-subscribers-to-20-song-downloads-per-month , https://forklog.com/en/news/suno-imposes-music-download-limits-amid-legal-and-content-concerns
