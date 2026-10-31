@@ -47,3 +47,9 @@
   - 運用上の示唆: 既存曲に似た楽曲は削除・アカウント影響のリスク。実在曲・アーティストの模倣禁止(CLAUDE.md)を厳守。アップロード前の類似チェックを人が実施。
 - DistroKid: 10月の公式なAI方針変更は検索で見つからず(未確認)。「遡及適用・再スキャン」とする業者記事(undetectr)があるが、他に裏付けなく未確認。 https://undetectr.com/blog/distrokid-ai-policy-2026
 - Suno: 2026-08-10発表・09-03施行の上限(無料は通算7回、Pro月20、Premier月60)を複数報道で再確認。既存ライブラリにも適用との報道あり、未使用分の繰り越しなしとの記述あり。10月の追加変更は見つからず。Suno公式は未確認。 https://www.musicbusinessworldwide.com/suno-limits-pro-subscribers-to-20-song-downloads-per-month , https://forklog.com/en/news/suno-imposes-music-download-limits-amid-legal-and-content-concerns
+
+## 追記 2026-11-01 (WebFetchは全公式ドメインで不可、すべて二次情報・未確認)
+- DistroKid/UMG: 2026-10-19、UMGとSonyがAIアップロード規模の開示を求める申立てとの報道(Hypebot、本文未読)。DistroKidはUMGの請求に応じた削除を確認済み、事前通知なし。訴状の焦点は「AI関与の未開示」との報道。DistroKidの公式なAI方針変更は未確認。 https://www.hypebot.com/umg-sony-sue-distrokid-to-reveal-scale-of-suno-and-ai-music/ , https://routenote.com/radar/umg-sues-distrokid-what-independent-artists-need-to-know/
+  - 示唆: AIクレジットを必ず正直に入力。類似チェックを人が実施。
+- Suno: 10月の変更なし(未確認含む)。9/3発効規約の詳細は第三者トラッカー経由。 https://conductatlas.com/platform/suno/suno-terms-of-service/history/ , 公式 https://suno.com/terms-of-service は人が確認。
+- Spotify: AI Personaバッジ(2026年9月半ば導入予定との報道、実施は未確認)。AI Personaはフォロー外ユーザーへの推薦に含まれないとされる。 https://metalinjection.net/news/spotify-ai
