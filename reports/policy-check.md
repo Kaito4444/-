@@ -47,3 +47,10 @@
   - 運用上の示唆: 既存曲に似た楽曲は削除・アカウント影響のリスク。実在曲・アーティストの模倣禁止(CLAUDE.md)を厳守。アップロード前の類似チェックを人が実施。
 - DistroKid: 10月の公式なAI方針変更は検索で見つからず(未確認)。「遡及適用・再スキャン」とする業者記事(undetectr)があるが、他に裏付けなく未確認。 https://undetectr.com/blog/distrokid-ai-policy-2026
 - Suno: 2026-08-10発表・09-03施行の上限(無料は通算7回、Pro月20、Premier月60)を複数報道で再確認。既存ライブラリにも適用との報道あり、未使用分の繰り越しなしとの記述あり。10月の追加変更は見つからず。Suno公式は未確認。 https://www.musicbusinessworldwide.com/suno-limits-pro-subscribers-to-20-song-downloads-per-month , https://forklog.com/en/news/suno-imposes-music-download-limits-amid-legal-and-content-concerns
+
+## 追記 2026-11-03 (新規分のみ。WebFetch未使用、すべてWebSearch要約に基づく二次情報、公式本文は未確認)
+- DistroKid公式のAI方針変更: 変更見つからず(未確認)。DistroKidのAIクレジットはリリース後も追加・更新可との第三者ブログ記述(2026-10-25更新)のみ。 https://jackrighteous.com/en-gb/blogs/ai-music-distribution-guide/spotify-ai-credits-distrokid-ai-music-uploads
+- UMG対DistroKid訴訟の続報: 新たな判決・和解は見つからず(最新の裁判所記録は未確認)。訴状は明示的にAI開示された音楽は対象外と記載との報道を再確認。侵害録音の件数は報道により「1,000」(10-30記載)と「約2,000」で食い違い、要確認。DistroKidは削除は「ごく少数」と説明し申立てを争う姿勢。DistroKidはIFPIのStreaming Integrity Initiativeの署名者に含まれないとの報道。 https://www.musicbusinessworldwide.com/distrokid-confirms-it-has-removed-tracks-in-response-to-umg-claims/ , https://www.hypebot.com/umg-sues-distrokid-for-alleged-ai-slop-and-copyright-theft/ , https://www.musicbusinessworldwide.com/over-50-of-a-major-streaming-services-tracks-come-from-distrokid-and-other-revelations-from-umgs-lawsuit/
+- Suno(新規): 2026-09-18 UMG・Sonyが第二訴訟(ボストン、60,202録音、v6の学習が対象)。09-22 Sunoはv6がWarner/BMG/Believeのライセンスコンテンツで学習と説明。10-06 イタリア競争当局がSuno利用規約(09-03発効版)の不公正条項の恐れで調査開始(最終判断ではない)。09-03版規約の許諾範囲にはユーザー入力と出力がモデル改善目的で含まれるとの報道。第一訴訟は12-01に審問予定。 https://thenextweb.com/news/universal-sony-second-lawsuit-suno-60202-recordings , https://www.musicbusinessworldwide.com/suno-faces-investigation-in-italy-over-its-terms-of-service/
+  - 注意: 一部の要約に「UMGがSunoと和解」とあるが、別の最新報道ではUMG/Sonyは訴訟継続中。UMG-Suno和解は未確認(Udioとの和解は別件)。
+  - 運用上の示唆: Sunoの訴訟・規約は流動的。商用利用権の根拠(有料期間中のダウンロード)を日付付きで保存し、人がSuno公式規約を再確認する。
