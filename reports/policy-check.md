@@ -1,6 +1,6 @@
 # 規約チェック (AI音楽の扱い)
 
-最終確認日: 2026-10-18
+最終確認日: 2026-11-04
 注意: 今回 WebFetch が全ドメインで名前解決エラー(ENOTFOUND)となり、公式ページ本文を直接読めていない。以下は検索結果の要約(検索エンジン経由)に基づく。公式本文での再確認は「未確認」。
 
 ## DistroKid
@@ -54,3 +54,10 @@
 - Suno(新規): 2026-09-18 UMG・Sonyが第二訴訟(ボストン、60,202録音、v6の学習が対象)。09-22 Sunoはv6がWarner/BMG/Believeのライセンスコンテンツで学習と説明。10-06 イタリア競争当局がSuno利用規約(09-03発効版)の不公正条項の恐れで調査開始(最終判断ではない)。09-03版規約の許諾範囲にはユーザー入力と出力がモデル改善目的で含まれるとの報道。第一訴訟は12-01に審問予定。 https://thenextweb.com/news/universal-sony-second-lawsuit-suno-60202-recordings , https://www.musicbusinessworldwide.com/suno-faces-investigation-in-italy-over-its-terms-of-service/
   - 注意: 一部の要約に「UMGがSunoと和解」とあるが、別の最新報道ではUMG/Sonyは訴訟継続中。UMG-Suno和解は未確認(Udioとの和解は別件)。
   - 運用上の示唆: Sunoの訴訟・規約は流動的。商用利用権の根拠(有料期間中のダウンロード)を日付付きで保存し、人がSuno公式規約を再確認する。
+
+## 追記 2026-11-04 (新規分のみ。WebFetchは hypebot.com / suno.com / support.distrokid.com で名前解決エラー。すべてWebSearch要約に基づき、公式本文は未確認)
+- 件数の食い違い(整理): 訴状は録音1,000件を名指し、調査での累計は約2,000件とも記載との要約。別の数字であり矛盾ではない可能性が高いが、訴状原文は未確認。請求は著作権侵害4カウント+デラウェア州不当取引慣行法1カウント、侵害トラック削除と反復侵害者アカウント停止を求める。 https://www.unite.ai/umg-sues-distrokid-over-ai-slop-and-copyright-infringement/ , https://www.musicweek.com/labels/read/universal-music-group-sues-distrokid-over-alleged-copyright-infringement/094995
+- 12-01審問(訂正): Appleの召喚状無効化申立て(Suno訴訟の証拠開示)の審問との要約。和解審問ではない。UMG/Sony対Sunoの和解は確認できず、2026-04に交渉行き詰まりとの報道。WarnerはSunoと和解済み、UMGが和解したのはUdio。 https://musicbusinessworldwide.com/suno-fights-to-make-apple-testify-on-whether-apple-music-could-survive-without-umg-and-sony-claiming-the-majors-use-their-catalogs-as-a-cudgel-to-win-anti-ai-concessions/ , https://www.digitalmusicnews.com/2026/04/09/suno-universal-music-lawsuit-settlement-impasse/
+- Suno商用利用(公式ページの検索要約、確認日 2026-11-04、本文は未取得): 無料プランの曲はSuno所有で非商用のみ(help.suno.com)。公式ブログ(2026-08-10付)は有料購読者がダウンロードした曲に商用権、トライアルのダウンロードは個人利用のみ。所有権の文言はWarner提携後に改定との報道。 https://help.suno.com/en/articles/2416769 , https://blog.suno.com/blog/suno-updates-tos , https://www.musicinafrica.net/magazine/suno-adjusts-ai-music-ownership-terms-after-warner-music-partnership
+  - 運用上の示唆: 「所有」ではなく「商用ライセンス」の枠組みに変わった可能性があるため、09-03版規約本文を人が読み、確認日付きで保存する。有料期間中のダウンロード分のみ配信対象にする。
+- DistroKid公式ヘルプ3記事の本文: 今回も取得不可(未確認)。公式のAI方針変更の報道は見つからず。
