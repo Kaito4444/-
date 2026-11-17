@@ -61,3 +61,11 @@
 - Suno商用利用(公式ページの検索要約、確認日 2026-11-04、本文は未取得): 無料プランの曲はSuno所有で非商用のみ(help.suno.com)。公式ブログ(2026-08-10付)は有料購読者がダウンロードした曲に商用権、トライアルのダウンロードは個人利用のみ。所有権の文言はWarner提携後に改定との報道。 https://help.suno.com/en/articles/2416769 , https://blog.suno.com/blog/suno-updates-tos , https://www.musicinafrica.net/magazine/suno-adjusts-ai-music-ownership-terms-after-warner-music-partnership
   - 運用上の示唆: 「所有」ではなく「商用ライセンス」の枠組みに変わった可能性があるため、09-03版規約本文を人が読み、確認日付きで保存する。有料期間中のダウンロード分のみ配信対象にする。
 - DistroKid公式ヘルプ3記事の本文: 今回も取得不可(未確認)。公式のAI方針変更の報道は見つからず。
+
+## 追記 2026-11-18 Sunoの学習データ訴訟リスク(二次情報・未確認。WebFetchは4公式ドメインで名前解決エラー、公式本文・訴状・裁判所記録は未取得)
+- 出典の不確かさ: 以下は research/2026-11-18.md が記録したWebSearch要約(報道・ニュース系サイト)に基づく。主張の段階であり判決ではない。報道間で金額・提訴先に食い違いがある。
+- Suno新規訴訟(2026-11-06、報道): Eight Mile Style(出版社)がSunoを提訴(損害額4,100万ドル超との記述、提訴先はカリフォルニア連邦地裁とするが、サンフランシスコ/N.D. Cal.の表記が混在)。Elvis Presley側の権利者が同日別訴(声と肖像のAI生成利用を主張)。後者の金額は記事間で整合しない記述があり未確認。11-10にNVentures(出資者)が召喚状の無効化/範囲限定を申立てとの記述。11-10以降の報道は見つからず。 https://www.itechpost.com/articles/237754/20261109/suno-faces-ai-lawsuit-elvis-presley-eminem-rights-holders-over-copyright-infringement.htm , https://ctol.digital/news/elvis-eminem-suno-licensing-risk/
+- 既出の訴訟(上記11-03/11-04と同じ二次情報): Sony/UMGの第二訴訟(2026-09-18、ボストン)。インディーアーティストのクラスアクションは一部請求(AI出力、ストリームリッピング)が証拠開示へ進むとの記述。Sunoのデータ漏えいに関する集団訴訟2件(2026-07)との記述(未確認)。 https://www.musicbusinessworldwide.com/judge-refuses-to-dismiss-indie-artists-proposed-class-action-against-suno-clearing-ai-output-and-stream-ripping-claims-for-discovery/ , https://completemusicupdate.com/two-class-action-lawsuits-filed-over-sunos-big-data-breach/
+- リスクの位置づけ: Sunoの学習データをめぐる訴訟は複数あり流動的。生成物を配信する際の法的評価(出力の利用に影響するか)は未確認で、本ファイルは「問題ない/ある」と断定しない。結果の方向は予測しない。
+- 運用上の示唆(方針変更なし): 訴訟報道だけを理由にした全面停止も、楽観視した急ぎのアップロードもしない。厳選・正直なAI開示・既存の曲/声/キャラに似せない運用を維持。人がSuno公式規約、DistroKid公式ヘルプ、裁判所記録を確認日付きで記録するまで、「権利はクリア」と書かない。
+- Spotify AI開示(DDEX): ベンダーブログ中心の二次情報で、「開示なしは空欄になる」説と「開示は任意」説が併存し未検証。DistroKidのアップロード画面の実物確認で解消する(上記DistroKid・Spotify節は公式本文未確認のまま)。 https://interspacemusic.com/blog/spotify-ai-credits-live-disclosure-only-travels-through-your-distributor/ , https://dynamoi.com/learn/faqs/spotify-ai-music-policy/
