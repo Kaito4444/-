@@ -61,3 +61,7 @@
 - Suno商用利用(公式ページの検索要約、確認日 2026-11-04、本文は未取得): 無料プランの曲はSuno所有で非商用のみ(help.suno.com)。公式ブログ(2026-08-10付)は有料購読者がダウンロードした曲に商用権、トライアルのダウンロードは個人利用のみ。所有権の文言はWarner提携後に改定との報道。 https://help.suno.com/en/articles/2416769 , https://blog.suno.com/blog/suno-updates-tos , https://www.musicinafrica.net/magazine/suno-adjusts-ai-music-ownership-terms-after-warner-music-partnership
   - 運用上の示唆: 「所有」ではなく「商用ライセンス」の枠組みに変わった可能性があるため、09-03版規約本文を人が読み、確認日付きで保存する。有料期間中のダウンロード分のみ配信対象にする。
 - DistroKid公式ヘルプ3記事の本文: 今回も取得不可(未確認)。公式のAI方針変更の報道は見つからず。
+
+## 追記 2026-11-19 (二次情報・未確認。WebFetchは support.distrokid.com が引き続き名前解決失敗、公式本文は未取得)
+- Suno関連で2026-11-06付の新規提訴が報道されている(Elvis Presley Enterprises等、Eight Mile Style、Jason Isbell主導の集団訴訟)。争点は声・スタイル・肖像の類似等。提訴は主張であり判決ではない。 https://www.itechpost.com/articles/237754/20261109/suno-faces-ai-lawsuit-elvis-presley-eminem-rights-holders-over-copyright-infringement.htm https://www.rttnews.com/3688370/jason-isbell-leads-class-action-lawsuit-against-ai-music-generator-suno.aspx
+- DistroKid・SpotifyのAI方針について、11月付の新しい公式変更の報道は見つからず(未確認)。
