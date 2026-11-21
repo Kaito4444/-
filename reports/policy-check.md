@@ -61,3 +61,6 @@
 - Suno商用利用(公式ページの検索要約、確認日 2026-11-04、本文は未取得): 無料プランの曲はSuno所有で非商用のみ(help.suno.com)。公式ブログ(2026-08-10付)は有料購読者がダウンロードした曲に商用権、トライアルのダウンロードは個人利用のみ。所有権の文言はWarner提携後に改定との報道。 https://help.suno.com/en/articles/2416769 , https://blog.suno.com/blog/suno-updates-tos , https://www.musicinafrica.net/magazine/suno-adjusts-ai-music-ownership-terms-after-warner-music-partnership
   - 運用上の示唆: 「所有」ではなく「商用ライセンス」の枠組みに変わった可能性があるため、09-03版規約本文を人が読み、確認日付きで保存する。有料期間中のダウンロード分のみ配信対象にする。
 - DistroKid公式ヘルプ3記事の本文: 今回も取得不可(未確認)。公式のAI方針変更の報道は見つからず。
+
+## 追記 2026-11-22
+- 今回も公式本文は取得不可(support.distrokid.com でWebFetch名前解決失敗)。新規の規約確認はなし。11-09以降の動向(Suno関連の新規訴訟報道、DL上限の再確認など)は research/2026-11-22.md に二次情報・未確認として記載。公式本文での確認は引き続き「未確認」。
