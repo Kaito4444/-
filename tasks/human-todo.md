@@ -42,3 +42,6 @@
 - [ ] (2026-11-22) 【最優先】案A・Bの試聴結果を1行で共有(選定 / 見送り / 未生成のいずれでも可)。10-19以降共有なしで滞留中(11-09から13日経過)。新曲は今日も追加なし(plans/2026-11-22.md)
 - [ ] (2026-11-22) 自動調査で support.distrokid.com が今回もWebFetch名前解決失敗。環境のネットワーク許可に suno.com, help.suno.com, support.distrokid.com, support.spotify.com を追加するか、規約本文を確認日・版付きで人が記録
 - [ ] (2026-11-22) Suno/DistroKid関連の新たな訴訟報道(research/2026-11-22.md、二次情報・日付や管轄が報道間で不整合)は、裁判所記録など一次情報で確認(任意)
+- [ ] (2026-11-23) 【最優先】案A・Bの試聴結果を1行で共有(選定 / 見送り / 未生成のいずれでも可)。10-19以降共有なしで滞留中。新曲は今日も追加なし(plans/2026-11-23.md)
+- [ ] (2026-11-23) support.distrokid.com が今回もWebFetch名前解決失敗。ネットワーク許可に suno.com, help.suno.com, support.distrokid.com, support.spotify.com を追加するか、規約本文(Suno商用条件・DL上限、DistroKidのAI開示画面)を確認日・版付きで記録
+- [ ] (2026-11-23) (任意)mora 11/25付ランキング公開後の目視確認、Suno/DistroKid関連訴訟の裁判所記録(報道は二次情報・不整合あり)
