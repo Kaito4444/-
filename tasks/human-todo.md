@@ -48,3 +48,6 @@
 - [ ] (2026-11-24) 【最優先】案A・Bの試聴結果を1行で共有(選定 / 見送り / 未生成のいずれでも可)。10-19以降共有なしで滞留中。新曲は今日も追加なし(plans/2026-11-24.md)
 - [ ] (2026-11-24) support.distrokid.com が今回もWebFetch名前解決失敗。ネットワーク許可に suno.com, help.suno.com, support.distrokid.com, support.spotify.com を追加するか、規約本文(Suno商用条件・DL上限、DistroKidのAI開示画面)を確認日・版付きで記録
 - [ ] (2026-11-24) (任意)mora 11/25付ランキング公開後の目視確認、Suno/DistroKid関連訴訟の裁判所記録(報道は二次情報)
+- [ ] (2026-11-25) 【最優先】案A・Bの試聴結果を1行で共有(選定 / 見送り / 未生成のいずれでも可)。10-19以降共有なしで滞留中。新曲は今日も追加なし(plans/2026-11-25.md)
+- [ ] (2026-11-25) support.distrokid.com が今回もWebFetch名前解決失敗。ネットワーク許可に suno.com, help.suno.com, support.distrokid.com, support.spotify.com を追加するか、規約本文(Suno商用条件・DL上限、DistroKidのAI開示画面)を確認日・版付きで記録
+- [ ] (2026-11-25) (任意)Spotify「AI Persona」バッジ(2026-08、二次情報)とUMG対DistroKid提訴(単一ソース)を公式・裁判所記録で確認。mora 11/25付ランキングの目視確認
