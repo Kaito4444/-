@@ -54,3 +54,6 @@
 - [ ] (2026-11-26) 【最優先】案A・Bの試聴結果を1行で共有(選定 / 見送り / 未生成のいずれでも可)。10-19以降共有なしで滞留中。新曲は今日も追加なし(plans/2026-11-26.md)
 - [ ] (2026-11-26) support.distrokid.com が今回もWebFetch名前解決失敗。ネットワーク許可に suno.com, help.suno.com, support.distrokid.com, support.spotify.com を追加するか、規約本文(Suno商用条件・自分のプランのDL上限、DistroKidのAI開示画面)を確認日・版付きで記録
 - [ ] (2026-11-26) DistroKidのAI検出(ACRCloud)タグの有無をヘルプ/アップロード画面で確認(単一ソース報道・未確認)。Sunoの無料プランDL可否は報道間で不一致のため公式で確認
+- [ ] (2026-11-27) 【最優先】案A・Bの試聴結果を1行で共有(選定 / 見送り / 未生成のいずれでも可)。10-19以降共有なしで滞留中。新曲は今日も追加なし(plans/2026-11-27.md)
+- [ ] (2026-11-27) support.distrokid.com と suno.com が今回もWebFetch名前解決失敗。ネットワーク許可に suno.com, help.suno.com, support.distrokid.com, support.spotify.com を追加するか、規約本文を確認日・版付きで記録
+- [ ] (2026-11-27) Suno Premierのダウンロード上限が報道間で不一致(月60曲 / Studioから無制限)。自分のプランの上限・商用条件を公式で確認
